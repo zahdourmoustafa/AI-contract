@@ -13,7 +13,7 @@ import "./config/passport";
 
 // routes
 import authRoute from "./routes/auth";
-// import contractsRoute from "./routes/contracts";
+import contractsRoute from "./routes/contracts";
 // import paymentsRoute from "./routes/payments";
 // import { handleWebhook } from "./controllers/payment.controller";
 
@@ -60,7 +60,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use("/auth", authRoute);
-// app.use("/contracts", contractsRoute);
+app.use("/contracts", contractsRoute);
 // app.use("/payments", paymentsRoute);
 
 const PORT = 8080;
